@@ -1,0 +1,22 @@
+http://askubuntu.com/questions/380237/path-variable-to-apache-opennlp-ok-but-doesnt-work
+
+http://self-learning-java-tutorial.blogspot.in/2015/10/setting-up-opennlp-command-line.html
+
+opennlp POSTaggerTrainer -model en-sent_trained.bin -lang en -data output.txt -encoding UTF-8
+
+export OPENNLP_HOME=/home/neeraj/Desktop/apache-opennlp-1.5.2-incubating
+export PATH=$PATH:$OPENNLP_HOME/bin
+echo $OPENNLP_HOME
+
+
+############################ Install Java ########################
+
+http://tipsonubuntu.com/2016/07/31/install-oracle-java-8-9-ubuntu-16-04-linux-mint-18/
+
+
+opennlp POSTaggerTrainer -model en-brown_pos_trained.bin -lang en -data output.txt -encoding UTF-8
+
+opennlp POSTagger en-brown_pos_trained.bin < TestNoTag.txt > PredictAndTag.txt
+
+
+

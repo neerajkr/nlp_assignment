@@ -1,0 +1,48 @@
+Neeraj Kumar
+Roll-13427
+NLP-Assignment 3
+====================================
+
+Files:
+1. a_cky.py    : CKY algorithm
+2. b_earley.py : Earley Algorithm
+
+====================================
+
+To run the files:
+
+type "python filename" on terminal e.g. "python a_cky.py"
+
+
+================================
+
+To change the input sentence:
+Open the file and in the variable "sentence", assign a new sentence
+
+=====================================
+sentence="does the flight include a meal"
+
+Output for Earley Algorithm:
+
+S_0   -> S $              [0-6]
+  S     -> X1 VP $          [0-6]
+    X1    -> AUX NP $         [0-3]
+      AUX   -> does $           [0-1]
+      NP    -> DET NOMINAL $    [1-3]
+        DET   -> the $            [1-2]
+        NOMINAL -> flight $         [2-3]
+    VP    -> VERB NP $        [3-6]
+      VERB  -> include $        [3-4]
+      NP    -> DET NOMINAL $    [4-6]
+        DET   -> a $              [4-5]
+        NOMINAL -> meal $           [5-6]
+
+Output for CYK Algorithm:
+
+('S', ('X1', ('AUX', 'does'), ('NP', ('DET', 'the'), ('NOMINAL', 'flight'))), ('VP', ('VERB', 'include'), ('NP', ('DET', 'a'), ('NOMINAL', 'meal'))))
+
+
+Note: We can see both the parse trees are same. Only representation is different.
+
+
+
